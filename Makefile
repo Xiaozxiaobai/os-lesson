@@ -119,9 +119,3 @@ fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
 
 -include user/*.d
-
-grade:
-	@echo $(MAKE) clean
-	@$(MAKE) clean || \
-          (echo "'make clean' failed.  HINT: Do you have another running instance of xv6?" && exit 1)
-	./grade-lab-syscall
